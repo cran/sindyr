@@ -1,0 +1,13 @@
+592c17e652844e4c82f4d9a975c1bac5 *DESCRIPTION
+563127c91882c80e263b82af8f0c5bb1 *NAMESPACE
+beb8d8fef5aceee43f1811e6d66076da *R/features.R
+edb65e92ea357378eaf61bb82984c30b *R/finite_difference.R
+9ad86d6fbfb9adc92e5d7bc188725233 *R/finite_differences.R
+6e0a3d13a58504fb2613e562171c2c34 *R/sindy.R
+8ae31d21c757a2bc7a614d77d97fbc2f *R/windowed_sindy.R
+f291ffcdee67777b8a048687e474fdf9 *man/features.Rd
+646a269086d0f24b91b1cba41f82b7f2 *man/finite_difference.Rd
+6cd5ba198bc8ad8b3f75c3057cdbf357 *man/finite_differences.Rd
+1fbb1efeac8c35cc4c3a5ecf0a9120d2 *man/sindy.Rd
+ed4fe1670ca2f707319d43fa3f68b3b4 *man/sindyr-package.Rd
+154d82806734b94eb894fa7abe728695 *man/windowed_sindy.Rd
