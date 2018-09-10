@@ -45,14 +45,14 @@ sindy = function(xs,dx=NULL,dt=1,Theta=NULL,lambda=.05, # main parameters
   }
   
   rownames(B) = colnames(Theta) # let's make sure we can recognize B after all this
-  colnames(B) = colnames(xs) # so that B feels like a warm, familiar friend
+  colnames(B) = colnames(xs) 
   
   if (!is.null(B.expected)) {
     B.err = sqrt(mean((B.expected-B)^2))
   } else { B.err = NULL }
   
   p_dx = Theta %*% B # prediction error
-  pred.err = sqrt(mean(p_dx[,2]-dx[,2])^2)
+  pred.err = sqrt(mean(p_dx-dx)^2)
   
   simple.kolmog = sum(B!=0)
   prop.coef = sum(B!=0)/length(B)

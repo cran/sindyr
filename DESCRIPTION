@@ -1,8 +1,8 @@
 Package: sindyr
 Type: Package
 Title: Sparse Identification of Nonlinear Dynamics
-Version: 0.2
-Date: 2018-08-10
+Version: 0.2.1
+Date: 2018-09-10
 Author: Rick Dale and Harish S. Bhat
 Maintainer: Rick Dale <racdale@gmail.com>
 Description: 
@@ -17,6 +17,6 @@ License: GPL (>= 2)
 Collate: 'windowed_sindy.R' 'sindy.R' 'features.R'
         'finite_differences.R' 'finite_difference.R'
 NeedsCompilation: no
-Packaged: 2018-08-14 16:25:29 UTC; rickdale
+Packaged: 2018-09-10 21:19:45 UTC; rickdale
 Repository: CRAN
-Date/Publication: 2018-08-16 09:30:02 UTC
+Date/Publication: 2018-09-10 21:50:09 UTC
