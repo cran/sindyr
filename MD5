@@ -1,9 +1,9 @@
-f0bf67273a045541baceaddf4c4e4aee *DESCRIPTION
+a49c14b1c5901d2c61c3bdf2e374f68c *DESCRIPTION
 563127c91882c80e263b82af8f0c5bb1 *NAMESPACE
 beb8d8fef5aceee43f1811e6d66076da *R/features.R
 edb65e92ea357378eaf61bb82984c30b *R/finite_difference.R
 9ad86d6fbfb9adc92e5d7bc188725233 *R/finite_differences.R
-0bfb62f42a35de5f98f6a30af84daa53 *R/sindy.R
+a0e03719954eeee3887cbed482ab544b *R/sindy.R
 8ae31d21c757a2bc7a614d77d97fbc2f *R/windowed_sindy.R
 f291ffcdee67777b8a048687e474fdf9 *man/features.Rd
 646a269086d0f24b91b1cba41f82b7f2 *man/finite_difference.Rd
