@@ -6,7 +6,7 @@
 #' @param Theta matrix of features; if not supplied, assumes polynomial features of order 3
 #' @param lambda threshold to use for iterated least squares sparsification (Brunton et al.)
 #' @param fit.its number of iterations to conduct the least-square threshold sparsification; default = 10
-#' @param B.expected the function will compute a goodness of fit if supplied with an expected coefficient matrix B; default = NULL
+#' @param B.expected the function will compute a goodness of fit if supplied with an expected coefficient matrix B; when omitted, function assumes prior window's B is the expected, and computes mean squared error, giving dB/dt
 #' @param window.size size of window to segment raw data as separate time series; defauls to deciles
 #' @param window.shift step sizes across windows, permitting overlap; defaults to deciles
 #' @return a data frame of various statistics including window, B error, prediction error, model complexity
@@ -26,6 +26,9 @@ windowed_sindy = function(xs,dx=NULL,dt=1,Theta=NULL,lambda=.05,fit.its=10,B.exp
     } else {
       sub.dx = NULL
     }    
+    if (is.null(B.expected) & i>=ixes[2]) {
+      B.expected = sindy.obj$B
+    }
     sindy.obj = sindy(sub.xs,dx=sub.dx,dt=dt,Theta=Theta,lambda=lambda,B.expected=B.expected,verbose=F,fit.its=fit.its,plot.eq.graph=F)
     j = j + 1
     windowed.results = rbind(windowed.results,data.frame(t=i,window=j,window.size=window.size,

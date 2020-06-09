@@ -14,7 +14,7 @@
 
 sindy = function(xs,dx=NULL,dt=1,Theta=NULL,lambda=.05, # main parameters
                  B.expected=NULL,verbose=FALSE,fit.its=10,
-                 plot.eq.graph=FALSE) {
+                 plot.eq.graph=FALSE,eq.graph.par=NULL) {
   
   if (is.null(dx)) { # if dx not supplied, let's estimate it
     dx = xs*0 # initialize to 0
@@ -90,13 +90,17 @@ sindy = function(xs,dx=NULL,dt=1,Theta=NULL,lambda=.05, # main parameters
     co = layout_nicely(g)
     plot(0, type="n", ann=FALSE, axes=FALSE, xlim=extendrange(co[,1]), 
          ylim=extendrange(co[,2]))
-    plot(g,rescale=F,add=T,
-         edge.arrow.size=1,
-         vertex.label.cex=1.5,
-         layout=co,
-         vertex.shape="rectangle",
-         vertex.size=(strwidth(V(g)$label) + strwidth("oo")) * 100,
-         vertex.size2=strheight("I")*2*100,asp=0)
+    if (is.null(eq.graph.par)) {
+      plot.pars = par(edge.arrow.size=1,
+        vertex.label.cex=1.5,
+        layout=co,
+        vertex.shape="rectangle",
+        vertex.size=(strwidth(V(g)$label) + strwidth("oo")) * 100,
+        vertex.size2=strheight("I")*2*100,asp=0)
+    } else {
+      
+    }
+    plot(g,rescale=F,add=T,par)
   }  
   
   return(sindy.obj) 
