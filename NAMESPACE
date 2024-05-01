@@ -2,7 +2,8 @@ export(finite_difference,
        finite_differences, 
        sindy, 
        windowed_sindy, 
-       features)
+       features,
+       lorenzattractor)
 
 import(arrangements,matrixStats,igraph,graphics,grDevices)
 
